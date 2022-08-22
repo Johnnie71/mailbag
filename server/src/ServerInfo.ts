@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 
-export interface IserverInfo {
+export interface IServerInfo {
 	smtp: {
 		host: string;
 		port: number;
@@ -13,7 +13,7 @@ export interface IserverInfo {
 		auth: { user: string; pass: string };
 	};
 }
-export let serverInfo: IserverInfo;
+export let serverInfo: IServerInfo;
 
 const rawInfo: string = fs.readFileSync(
 	path.join(__dirname, "../serverInfo.json")
